@@ -1,0 +1,12 @@
+site_name: divulgacion
+site_description: Divulgacion API REST
+repo_url: https://github.com/hernanramirez/divulgacion
+site_dir: site
+copyright: Copyright &copy; 2018, <a href="https://github.com/hernanramirez">hernanramirez</a>.
+dev_addr: 0.0.0.0:8001
+
+pages:
+  - Home: 'index.md'
+  - API:
+    - Authentication: 'api/authentication.md'
+    - Users: 'api/users.md'
