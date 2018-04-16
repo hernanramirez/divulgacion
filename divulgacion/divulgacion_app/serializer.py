@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from versatileimagefield.serializers import VersatileImageFieldSerializer
 
-from intranet.divulgacion_app.models import Noticia
+from divulgacion.divulgacion_app.models import Noticia
 
 
 class NoticiaSerializer(serializers.ModelSerializer):

@@ -1,6 +1,6 @@
 
-from intranet.divulgacion_app.models import Noticia
-from intranet.divulgacion_app.serializer import NoticiaSerializer
+from divulgacion.divulgacion_app.models import Noticia
+from divulgacion.divulgacion_app.serializer import NoticiaSerializer
 from rest_framework import generics
 
 

@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
-from intranet.divulgacion_app.views import noticias
-from intranet.divulgacion_app.views import api
+from divulgacion.divulgacion_app.views import noticias
+from divulgacion.divulgacion_app.views import api
 
 urlpatterns = [
     url(
