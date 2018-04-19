@@ -108,4 +108,4 @@ venv.bak/
 
 # Ignore migrations
 divulgacion/*/migrations/
-divulgacion/media/
+media/*
