@@ -1,17 +1,17 @@
-#from django.core.urlresolvers import reverse
+# from django.core.urlresolvers import reverse
 from django.views.generic import (
-    DetailView, ListView, RedirectView,
+    DetailView, ListView,
     UpdateView, CreateView, DeleteView
 )
 
 from django.contrib.auth.mixins import LoginRequiredMixin
-#from pure_pagination.mixins import PaginationMixin
+# from pure_pagination.mixins import PaginationMixin
 
 from divulgacion.divulgacion_app.models import Noticia
 
-#aqui empieza la importacion de libreiras REST
+# aqui empieza la importacion de libreiras REST
 
-#aqui termina la importacion de librerias REST
+# aqui termina la importacion de librerias REST
 
 
 class NoticiaListView(LoginRequiredMixin, ListView):
@@ -19,7 +19,7 @@ class NoticiaListView(LoginRequiredMixin, ListView):
     model = Noticia
     template_name = 'divulgacion_app/noticias/noticias_list.html'
     context_object_name = 'noticia_list'
-    #paginate_by = 50
+    # paginate_by = 50
 
     page = {
         'title': 'Administrador',
@@ -35,7 +35,7 @@ class NoticiaListView(LoginRequiredMixin, ListView):
 class NoticiaCreateView(LoginRequiredMixin, CreateView):
 
     fields = [
-        'titulo','resumen','empleado','contenido','imagen',
+        'titulo', 'resumen', 'empleado', 'contenido', 'imagen',
     ]
 
     model = Noticia
@@ -52,14 +52,14 @@ class NoticiaCreateView(LoginRequiredMixin, CreateView):
         return context
 
     # send the user back to their own page after a successful update
-    #def get_success_url(self):
+    # def get_success_url(self):
     #    return reverse('divulgacionapp:noticia_list')
 
 
 class NoticiaDetailView(LoginRequiredMixin, DetailView):
 
     fields = [
-        'titulo','resumen','empleado','contenido','fechareg','fechaact','imagen',
+        'titulo', 'resumen', 'empleado', 'contenido', 'fechareg', 'fechaact', 'imagen',
 
     ]
 
@@ -80,7 +80,7 @@ class NoticiaDetailView(LoginRequiredMixin, DetailView):
 class NoticiaUpdateView(LoginRequiredMixin, UpdateView):
 
     fields = [
-        'titulo','resumen','empleado','contenido','imagen',
+        'titulo', 'resumen', 'empleado', 'contenido', 'imagen',
     ]
 
     model = Noticia
@@ -97,14 +97,14 @@ class NoticiaUpdateView(LoginRequiredMixin, UpdateView):
         return context
 
     # send the user back to their own page after a successful update
-    #def get_success_url(self):
+    # def get_success_url(self):
     #    return reverse('divulgacionapp:noticia_list')
 
 
 class NoticiaDeleteView(LoginRequiredMixin, DeleteView):
 
     fields = [
-        'titulo','resumen','empleado','contenido','fechareg','fechaact','imagen',
+        'titulo', 'resumen', 'empleado', 'contenido', 'fechareg', 'fechaact', 'imagen',
     ]
 
     model = Noticia
@@ -121,5 +121,5 @@ class NoticiaDeleteView(LoginRequiredMixin, DeleteView):
         return context
 
     # send the user back to their own page after a successful update
-    #def get_success_url(self):
+    # def get_success_url(self):
     #    return reverse('divulgacionapp:noticia_list')

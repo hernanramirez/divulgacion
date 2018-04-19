@@ -12,4 +12,3 @@ class Noticia(models.Model):
     fechareg = models.DateTimeField(auto_now_add=True)
     fechaact = models.DateTimeField(auto_now=True)
     imagen = VersatileImageField('imagen', upload_to='imagenes/', blank=True, null=True)
-

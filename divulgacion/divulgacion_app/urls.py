@@ -33,7 +33,6 @@ urlpatterns = [
         name='noticia_delete'
     ),
 
-
     url(
         regex=r'^api/noticias/$',
         view=api.NoticiasRestList.as_view(),
