@@ -107,5 +107,5 @@ venv.bak/
 .mypy_cache/
 
 # Ignore migrations and media files generated
-divulgacion/*/migrations/
+#divulgacion/*/migrations/
 media/*
