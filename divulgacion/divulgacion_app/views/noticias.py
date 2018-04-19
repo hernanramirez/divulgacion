@@ -1,25 +1,25 @@
-from django.core.urlresolvers import reverse
+#from django.core.urlresolvers import reverse
 from django.views.generic import (
     DetailView, ListView, RedirectView,
     UpdateView, CreateView, DeleteView
 )
 
 from django.contrib.auth.mixins import LoginRequiredMixin
-from pure_pagination.mixins import PaginationMixin
+#from pure_pagination.mixins import PaginationMixin
 
-from intranet.divulgacion_app.models import Noticia
+from divulgacion.divulgacion_app.models import Noticia
 
 #aqui empieza la importacion de libreiras REST
 
 #aqui termina la importacion de librerias REST
 
 
-class NoticiaListView(LoginRequiredMixin, PaginationMixin, ListView):
+class NoticiaListView(LoginRequiredMixin, ListView):
 
     model = Noticia
     template_name = 'divulgacion_app/noticias/noticias_list.html'
     context_object_name = 'noticia_list'
-    paginate_by = 50
+    #paginate_by = 50
 
     page = {
         'title': 'Administrador',
@@ -52,8 +52,8 @@ class NoticiaCreateView(LoginRequiredMixin, CreateView):
         return context
 
     # send the user back to their own page after a successful update
-    def get_success_url(self):
-        return reverse('divulgacionapp:noticia_list')
+    #def get_success_url(self):
+    #    return reverse('divulgacionapp:noticia_list')
 
 
 class NoticiaDetailView(LoginRequiredMixin, DetailView):
@@ -97,8 +97,8 @@ class NoticiaUpdateView(LoginRequiredMixin, UpdateView):
         return context
 
     # send the user back to their own page after a successful update
-    def get_success_url(self):
-        return reverse('divulgacionapp:noticia_list')
+    #def get_success_url(self):
+    #    return reverse('divulgacionapp:noticia_list')
 
 
 class NoticiaDeleteView(LoginRequiredMixin, DeleteView):
@@ -121,5 +121,5 @@ class NoticiaDeleteView(LoginRequiredMixin, DeleteView):
         return context
 
     # send the user back to their own page after a successful update
-    def get_success_url(self):
-        return reverse('divulgacionapp:noticia_list')
+    #def get_success_url(self):
+    #    return reverse('divulgacionapp:noticia_list')

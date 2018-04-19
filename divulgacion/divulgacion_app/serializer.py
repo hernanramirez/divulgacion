@@ -1,11 +1,11 @@
 from rest_framework import serializers
 from versatileimagefield.serializers import VersatileImageFieldSerializer
 
-from intranet.divulgacion_app.models import Noticia
+from divulgacion.divulgacion_app.models import Noticia
 
 
 class NoticiaSerializer(serializers.ModelSerializer):
-    '''
+
     imagen = VersatileImageFieldSerializer(
         sizes=[
             ('full_size', 'url'),
@@ -14,7 +14,6 @@ class NoticiaSerializer(serializers.ModelSerializer):
             ('small_square_crop', 'crop__50x50')
         ]
     )
-    '''
 
     class Meta:
         model = Noticia
@@ -22,8 +21,9 @@ class NoticiaSerializer(serializers.ModelSerializer):
             'id',
             'titulo',
             'resumen',
-            'empleado',
+            'user',
             'contenido',
             'fechareg',
-            'fechaact'
-            )
+            'fechaact',
+            'imagen'
+        )
